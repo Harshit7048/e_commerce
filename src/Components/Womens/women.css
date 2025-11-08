@@ -1,0 +1,26 @@
+.womens{
+    margin-top: 30px;
+}
+
+.w-hero{
+    background-image: url('https://milanostyle.com/wp-content/uploads/2024/07/ladies-shopping-1170x600.png?crop=1');
+    background-position-y: 20%;
+}
+.w-text h1{
+    text-align: center;
+}
+.w-box-1{
+    background-image: url('https://images.unsplash.com/photo-1506152983158-b4a74a01c721?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjBiYWd8ZW58MHx8MHx8fDA%3D');
+}
+.w-box-2{
+    background-image: url('https://www.polagoclothing.com/cdn/shop/articles/Midi_Dress_Modestly.webp?v=1744401888');
+}
+.w-box-3{
+    background-image: url('https://www.thefashionspot.com/wp-content/uploads/sites/11/2020/11/Baggy-Jeans-Marquee-landscape-cropped.jpg');
+}
+.w-box-4{
+    background-image: url('https://cdn.shopify.com/s/files/1/0597/5592/1540/files/notion-media-021655_1024x1024.jpg?v=1698733438');
+}
+.w-section-3{
+    background-image: url('https://blog.shopfashionly.com/wp-content/uploads/2025/01/What-Is-High-Low-Fashion.jpg');
+}

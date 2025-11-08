@@ -1,0 +1,12 @@
+.c-product{
+    width: 95%;
+    display: flex;
+    /* box-shadow: 1px 1px 10px rgb(225, 221, 221); */
+     padding: 10px;
+     margin: 10px 0;
+     background-color: rgb(244, 240, 240);
+     gap: 10px;
+}
+.c-product img{
+    max-width: 200px;
+}

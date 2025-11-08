@@ -1,0 +1,98 @@
+ .mens{
+    width: 100%;
+    margin-top: 30px;
+ }
+ 
+ .mens-hero{
+       
+    background-image: url('https://images4.alphacoders.com/106/1062740.jpg');
+  
+    background-position-y: 30%;
+
+ }
+ .mens-hero-text div{
+    width: 80%;
+}
+.mens-hero-text h1{
+    font-size: 65px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+.mens-section-1{
+    display: flex;
+    /* background-color: rebeccapurple; */
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.m-s-1-box{
+    height: 300px;
+    width: 48%;
+    background: red;
+    border-radius: 5px;
+    background-image: url('https://34heritage.com/cdn/shop/articles/blog3_13.jpg?v=1692389070');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.m-box-2{
+    background-image: url('https://cms.cloudinary.vpsvc.com/image/upload/c_scale,dpr_auto,f_auto,q_auto:best,t_productPageHeroGalleryTransformation_v2,w_auto/India%20LOB/Clothing%20and%20Bags/Embroidered%20Office%20Shirts%20-Men/IN_Embroidered-Office-Shirts-Men_Hero-image_01');
+}
+.m-box-3{
+    background-image: url('https://shop.dstnc.com/cdn/shop/products/louisa_men_black_slider_1920x1080_b-10_10_22.jpg?v=1682982316');
+}
+.m-box-4{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/032/949/503/non_2x/man-in-black-polo-tshirt-with-blank-space-for-your-design-male-model-wearing-a-simple-black-polo-tshirt-on-a-white-background-front-view-and-back-view-top-section-croppedped-ai-generated-free-photo.jpg');
+}
+.m-s-box-text{
+    height: 100%;
+    width: 100%;
+    /* background: linear-gradient(to top , transparent,55% , black); */
+    position: absolute;
+    top: 100%;
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.395);
+    padding: 1rem;
+  
+}
+.m-s-box-text h1{
+    font-size: 35px ;
+    color: white;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 500;
+
+}
+.m-s-1-box:hover .m-s-box-text{
+    top: 50%;
+}
+.mens-section-3{
+    height: 70vh;
+    background: rebeccapurple;
+    margin-top: 50px;
+    background-image: url('https://www.gazman.com.au/cdn/shop/articles/BestWinterJackets_Blog_Winter_FeatureTile_1016x711_751ce837-eb2d-4f0b-9096-8741517400be.jpg?v=1719462605');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mens-s-5-text{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.484);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mens-s-5-text h1{
+    color: white;
+    font-size: 45px;
+     font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}

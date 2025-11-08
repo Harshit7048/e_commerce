@@ -1,0 +1,52 @@
+.footer{
+    display: flex;
+ 
+    padding: 3rem;
+    justify-content: space-between;
+    
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
+
+    margin: auto;
+    margin-top: 50px;
+    align-items: center;
+    box-shadow: 0.1px 0.1px 10px rgb(239, 236, 236);
+
+}
+.footer-second-line{
+    background-color: rgb(238, 235, 235);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+      font-family: "Montserrat", sans-serif;
+      
+}
+.f-nav{
+    display: flex;
+    gap: 25px;
+}
+.f-nav ul li{
+    margin: 10px;
+    color: gray;
+      font-family: "Montserrat", sans-serif;
+}
+
+.social-links{
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    align-items: end;
+}
+.social-links a{
+    color: rgb(97, 95, 95);
+}
+
+.f-logo{
+    font-size: 40px;
+    font-weight: 800;
+    font-style: italic;
+}
