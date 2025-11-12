@@ -5,11 +5,13 @@ import Header from "./Components/Header/Header"
 import Footer from "./Components/Footer/Footer"
 import UserContextProvider from "./Components/Context/UserContextProvider"
 
-import Mens from './Pages/Mens/Mens.jsx'
-import Womens from './Pages/Womens/Womens.jsx'
+
 import Login from './Pages/Login/Login.jsx'
-import Cart from './Components/Cart/Cart.jsx'
+ import Cart from './Pages/Cart.jsx'
 import Product from "./Pages/Product/Product.jsx"
+import ShopCategory from "./Pages/ShopCategory.jsx"
+import banner_mens from "./Components/Assets/banner_mens.png"
+import banner_women from './Components/Assets/banner_women.png'
 
 
 function App() {
@@ -22,8 +24,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/mens" element={<Mens />} />
-          <Route path="/womens" element={<Womens />} />
+          <Route path="/mens" element={<ShopCategory category="men" banner={banner_mens} />} />
+          <Route path="/womens" element={<ShopCategory category="women" banner={banner_women} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product" element={<Product />}>
