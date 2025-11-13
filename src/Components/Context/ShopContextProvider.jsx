@@ -5,6 +5,7 @@ import all_products from '../Assets/all_product'
 export default function ShopContextProvider(props) {
     const contextValue = { all_products }
 
+
     return (
         <ShopContext.Provider value={contextValue}>
             {props.children}

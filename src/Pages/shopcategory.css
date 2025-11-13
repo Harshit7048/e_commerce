@@ -1,9 +1,9 @@
 .card {
-    background-color: red;
+    /* background-color: red; */
 
     max-width: 300px;
     max-width: 280px;
-    box-shadow: 1px 1px 10px rgb(226, 223, 223);
+    box-shadow: 1px 1px 10px rgb(209, 205, 205);
 }
 
 .scard {
@@ -79,4 +79,38 @@
 
 .card-desc {
     padding: 20px;
+}
+
+.prod-btn {
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.prod-btn:hover {
+    background: none;
+    color: black;
+}
+
+.pop-up {
+    position: fixed;
+    right: -10%;
+    z-index: 99999;
+    top: 12%;
+    background-color: rgb(236, 195, 195);
+    padding: 1rem;
+
+    transition: all 0.3s ease-in-out;
+    border-top-left-radius: 10px;
+
+}
+
+.active-pop {
+
+    right: 0 !important;
+}
+
+.close-pop {
+    display: none;
 }
