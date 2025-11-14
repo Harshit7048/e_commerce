@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useContext, useRef } from "react";
 import './home.css'
 import Scard from "../../Components/Scard/Scard";
 import Button from "../../Components/Button/Button";
- 
+import data_product from "../../Components/Assets/data";
+import CartContext from "../../Components/Context/CartContext";
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
 
-    
+    const popUpRef = useRef(null)
+    const { cart, setCart } = useContext(CartContext)
+    const showAnimation = () => {
+        if (popUpRef.current) {
+            popUpRef.current.classList.add('active-pop')
+            setTimeout(() => {
+                popUpRef.current.classList.remove('active-pop')
+            }, 1000)
+        }
+    }
 
 
 
@@ -20,88 +32,30 @@ export default function Home() {
 
             </div>
         </div>
-
-        <div className="section-1">
-            <h1>Trending Products</h1>
-
-            <div className="products-1">
-                <Scard/>
-                <Scard/>
-                <Scard/>
-                <Scard/>
-            </div>
-        </div>
-
-        <div className="section-2">
-            <div className="s-2-box s-2-box-one">
-                <div className="s-2-box-child s-2-box-1"></div>
-                <div className="s-2-box-child s-2-box-2"></div>
-            </div>
-            <div className="s-2-box box-2">
-                <div className="s-2-box-main">
-                    <div className="s-2-box-text">
-                        <h1>Top Sellers</h1>
-                         <Button name="check out" css="bg-white"/>
+        <div className="trending-products">
+            <h1>Top Trending Products</h1>
+            <div ref={popUpRef} className="pop-up">
+                    Added
+                </div>
+            <div className="t-products">
+                {data_product.map((item) => (
+                    <div className="t-product">
+                        <img src={item.image} alt="" />
+                        <p>{item.name}</p>
+                        <p>{item.new_price}</p>
+                        <button onClick={() => {
+                                setCart([...cart, item])
+                                showAnimation()
+                            }}
+                                className="prod-btn"
+                            >Add To Cart</button>
+                            <Link to={`/product/${item.id}`} className="view-product-btn">View Product</Link>
                     </div>
-                </div>
+                ))}
             </div>
         </div>
 
-        <div className="section-3">
-            <h1>Top Men's Clothing</h1>
 
-            <div className="products-2">
-                <Scard/>
-                <Scard/>
-                <Scard/>
-                <Scard/>
-            </div>
-        </div>
-        <div className="section-3">
-            <h1>Top Women's Clothing</h1>
-
-            <div className="products-2">
-                <Scard/>
-                <Scard/>
-                <Scard/>
-                <Scard/>
-            </div>
-        </div>
-
-        <div className="section-4">
-            <h1>Our Satisfied Customers</h1>
-            <div className="testimonials">
-                <div className="t-box">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore fugiat aut eaque sequi! Atque rem, accusamus pariatur illo repellat magnam illum sequi, aut eius consequuntur quasi dolor culpa minima cupiditate porro dolore dolorem quisquam!</p>
-                    <p>⭐️⭐️⭐️</p>
-                    <p className="t-box-author">
-                        -ABC
-                    </p>
-                </div>
-                <div className="t-box">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore fugiat aut eaque sequi! Atque rem, accusamus pariatur illo repellat magnam illum sequi, aut eius consequuntur quasi dolor culpa minima cupiditate porro dolore dolorem quisquam!</p>
-                    <p>⭐️⭐️⭐️</p>
-                    <p className="t-box-author">
-                        -ABC
-                    </p>
-                </div>
-                <div className="t-box">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore fugiat aut eaque sequi! Atque rem, accusamus pariatur illo repellat magnam illum sequi, aut eius consequuntur quasi dolor culpa minima cupiditate porro dolore dolorem quisquam!</p>
-                    <p>⭐️⭐️⭐️</p>
-                    <p className="t-box-author">
-                        -ABC
-                    </p>
-                </div>
-                <div className="t-box">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore fugiat aut eaque sequi! Atque rem, accusamus pariatur illo repellat magnam illum sequi, aut eius consequuntur quasi dolor culpa minima cupiditate porro dolore dolorem quisquam!</p>
-                    <p>⭐️⭐️⭐️</p>
-                    <p className="t-box-author">
-                        -ABC
-                    </p>
-                </div>
-                 
-            </div>
-        </div>
 
     </div>
 }

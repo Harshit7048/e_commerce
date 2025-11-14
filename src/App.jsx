@@ -8,7 +8,7 @@ import UserContextProvider from "./Components/Context/UserContextProvider"
 
 import Login from './Pages/Login/Login.jsx'
  import Cart from './Pages/Cart.jsx'
-import Product from "./Pages/Product/Product.jsx"
+ import Product from "./Pages/Product.jsx"
 import ShopCategory from "./Pages/ShopCategory.jsx"
 import banner_mens from "./Components/Assets/banner_mens.png"
 import banner_women from './Components/Assets/banner_women.png'

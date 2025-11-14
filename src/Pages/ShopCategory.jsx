@@ -2,6 +2,7 @@ import React, { useContext, useRef } from "react";
 import ShopContext from "../Components/Context/ShopContext";
 import './shopcategory.css'
 import CartContext from "../Components/Context/CartContext";
+import { Link } from "react-router-dom";
 
 export default function ShopCategory(props) {
 
@@ -45,6 +46,7 @@ export default function ShopCategory(props) {
                             }}
                                 className="prod-btn"
                             >Add To Cart</button>
+                            <Link to={`/product/${ele.id}`} className="view-product-btn">View Product</Link>
                         </div>
 
 
