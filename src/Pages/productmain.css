@@ -1,0 +1,24 @@
+.product-page{
+    background: rebeccapurple;
+    display: flex;
+    max-width: 1200px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+    .product-details{
+        max-width: 50%;
+    }
+    .add-to-cart-btn{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            color: black;
+            background: none;
+        }
+    }
+
+.pr-heading{
+    font-size: 25px;
+}

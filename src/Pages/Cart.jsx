@@ -13,7 +13,7 @@ export default function Cart() {
         const total = cart.reduce((acc, item) => acc + Number(item.new_price), 0);
         setTotal(total);
         let finalCost = total + (total * 0.02) - (total * 0.1);
-        setFinalCost(finalCost);
+        setFinalCost(finalCost.toFixed(2));
         console.log("Total:", total);
     }, [cart])
     return (
