@@ -1,116 +1,250 @@
-.card {
-    /* background-color: red; */
-
-    max-width: 300px;
-    max-width: 280px;
-    box-shadow: 1px 1px 10px rgb(209, 205, 205);
-}
-
-.scard {
-    height: 100%;
-    width: 100%;
-    padding-bottom: 10px;
-
-}
-
-.card img {
-    width: 100%;
-    margin: auto;
-
-}
-
-.scard p {
-    padding: 5px;
-}
-
-.p-title {
-    font-size: 18px;
-    font-family: "Libertinus Sans", sans-serif;
-}
-
-.p-info {
-    padding: 10px;
-}
-
-.ratings {
-    background: pink;
-    max-width: fit-content;
-    min-width: 70px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    text-align: center;
-    border-radius: 8px;
-
-}
-
-.cart-button {
-    background: rgb(247, 159, 159);
-    border: none;
-    border-radius: 0px;
-    width: 100%;
-    height: 48px;
-    color: white;
-    cursor: pointer;
-}
-
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1250px;
-    margin: auto;
-    margin-top: 50px;
+:root {
+  --category-bg: #f5f5f5;
+  --card-bg: #ffffff;
+  --primary: #111111;
+  --muted: #6f6f6f;
+  --border: #e3e3e3;
+  --accent: #111111;
 }
 
 .shop-category {
-    padding: 1rem;
+  padding: 3rem 1.5rem 4rem;
+  background: radial-gradient(circle at top, rgba(0, 0, 0, 0.06), transparent 55%) var(--category-bg);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.category-hero {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  border-radius: 32px;
+  min-height: 320px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.55);
+  background-size: cover;
+  background-position: center;
+}
+
+.category-hero-overlay {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.category-hero-overlay h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.category-hero-overlay p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-tag {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+.category-hero-card {
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  backdrop-filter: blur(12px);
+}
+
+.card-eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.category-hero-card h3 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.category-hero-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.hero-cta {
+  align-self: flex-start;
+  text-decoration: none;
+  background: #fff;
+  color: var(--accent);
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+.banner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner img {
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
 }
 
 .banner h1 {
-    text-align: center;
-    font-size: 35px;
-    font-weight: 700;
-    padding-top: 30px;
-    font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: var(--primary);
+}
 
+.products {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-media {
+  background: #f8f8f8;
+  padding: 1.25rem;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .card-desc {
-    padding: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.card-name {
+  margin: 0;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.card-price-row {
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+}
+
+.price-new {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .prod-btn {
-    background: black;
-    color: white;
-    cursor: pointer;
-    border: 1px solid black;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.prod-btn:hover {
-    background: none;
-    color: black;
+.view-product-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  padding: 0.75rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary);
 }
 
 .pop-up {
-    position: fixed;
-    right: -10%;
-    z-index: 99999;
-    top: 12%;
-    background-color: rgb(236, 195, 195);
-    padding: 1rem;
-
-    transition: all 0.3s ease-in-out;
-    border-top-left-radius: 10px;
-
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.25s ease;
+  pointer-events: none;
 }
 
 .active-pop {
-
-    right: 0 !important;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.close-pop {
-    display: none;
+@media (max-width: 640px) {
+  .shop-category {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .category-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-radius: 20px;
+  }
 }

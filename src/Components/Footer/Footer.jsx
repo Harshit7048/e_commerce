@@ -1,48 +1,89 @@
 import React from "react";
-import './footer.css'
+import "./footer.css";
 
-export default function Footer(){
+const linkGroups = [
+  {
+    title: "Shop",
+    links: ["Home", "Mens", "Womens", "Accessories"],
+  },
+  {
+    title: "Support",
+    links: ["Shipping", "Returns", "Gift cards", "FAQs"],
+  },
+  {
+    title: "Company",
+    links: ["About", "Careers", "Press", "Partners"],
+  },
+];
 
-    return(
-    <>
-    <div className="footer">
-         
-         <div className="f-logo">
-            <h1>shoppers</h1>
-         </div>
-         <div className="f-side">
-            <div className="f-nav">
-                <ul>
-                    <li>Home</li>
-                    <li>Mens</li>
-                    <li>Womens</li>
-                    
-                </ul>
-                <ul>
-                    <li>Jeans</li>
-                    <li>Shirts</li>
-                    <li>Joggers</li>
+const contactDetails = [
+  "+1 (213) 555-0192",
+  "hi@shoppers.studio",
+  "New York · Los Angeles",
+];
 
-                </ul>
-                <ul>
-                    <li>Electronics</li>
-                    <li>Veggies</li>
-                    <li>Snacks</li>
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-brand">
+          <p className="footer-logo">shoppers.</p>
+          <p className="footer-copy">
+            Elevated essentials curated weekly. Designed for wardrobes that move
+            effortlessly from desk to dinner.
+          </p>
+          <div className="footer-social">
+            <a aria-label="Instagram" href="#">
+              <i className="fa-brands fa-instagram" />
+            </a>
+            <a aria-label="Facebook" href="#">
+              <i className="fa-brands fa-facebook-f" />
+            </a>
+            <a aria-label="YouTube" href="#">
+              <i className="fa-brands fa-youtube" />
+            </a>
+          </div>
+        </div>
 
-                </ul>
+        <div className="footer-links">
+          {linkGroups.map((group) => (
+            <div key={group.title} className="footer-column">
+              <p className="footer-heading">{group.title}</p>
+              <ul>
+                {group.links.map((link) => (
+                  <li key={link}>{link}</li>
+                ))}
+              </ul>
             </div>
-            <div className="social-links">
-                <p>Privacy Policy | </p>
-                <a href=""><i className="fa-brands fa-instagram"></i></a>
-                <a href=""><i className="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i className="fa-brands fa-youtube"></i></a>
-            </div>
-         </div>
-    </div>
-    <div className="footer-second-line">
-        <p>@copyright 2025 | Harshit Bhardwaj</p>
-    </div>
-    </>
-    )
-     
+          ))}
+        </div>
+
+        <div className="footer-newsletter">
+          <p className="footer-heading">Stay in the know</p>
+          <p className="footer-copy">
+            Weekly drop alerts, bespoke styling notes, and early access to capsule
+            releases.
+          </p>
+          <div className="footer-input">
+            <input type="email" placeholder="Email address" />
+             
+          </div>
+          <ul className="footer-contact">
+            {contactDetails.map((detail) => (
+              <li key={detail}>{detail}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} Shoppers Studio. All rights reserved.</p>
+        <div className="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </footer>
+  );
 }

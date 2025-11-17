@@ -1,56 +1,201 @@
+:root {
+  --footer-bg: #0b0b0b;
+  --footer-card: rgba(255, 255, 255, 0.03);
+  --footer-border: rgba(255, 255, 255, 0.08);
+  --footer-text: #f7f7f7;
+  --footer-muted: #9d9d9d;
+  --footer-grey: #1b1b1b;
+}
+
 .footer {
-    display: flex;
-
-    padding: 3rem;
-    justify-content: space-between;
-
-    background-color: rgb(255, 255, 255);
-    max-width: 100%;
-
-    margin: auto;
-    margin-top: 50px;
-    align-items: center;
-    box-shadow: 0.1px 0.1px 10px rgb(239, 236, 236);
-
+  margin-top: 4rem;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.footer-second-line {
-    background-color: rgb(0, 0, 0);
-    padding: 1.5rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
 }
 
-.f-nav {
-    display: flex;
-    gap: 25px;
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.f-nav ul li {
-    margin: 10px;
-    color: gray;
-    font-family: "Montserrat", sans-serif;
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
 }
 
-.social-links {
-    margin-top: 30px;
-    display: flex;
-    justify-content: end;
-    gap: 10px;
-    align-items: end;
+.footer-copy {
+  margin: 0;
+  color: var(--footer-muted);
+  line-height: 1.6;
 }
 
-.social-links a {
-    color: rgb(97, 95, 95);
+.footer-social {
+  display: flex;
+  gap: 0.85rem;
 }
 
-.f-logo {
-    font-size: 40px;
-    font-weight: 800;
-    font-style: italic;
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--footer-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--footer-text);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.footer-social a:hover {
+  background: var(--footer-text);
+  color: #000;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  min-width: 120px;
+}
+
+.footer-heading {
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: var(--footer-muted);
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.footer-column li {
+  color: var(--footer-text);
+  font-weight: 500;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.footer-column li:hover {
+  opacity: 1;
+}
+
+.footer-newsletter {
+  background: var(--footer-card);
+  border: 1px solid var(--footer-border);
+  border-radius: 20px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-input {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--footer-grey);
+  border-radius: 999px;
+  padding: 0.35rem;
+}
+
+.footer-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--footer-text);
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+}
+
+.footer-input input::placeholder {
+  color: var(--footer-muted);
+}
+
+.footer-input button {
+  border: none;
+  border-radius: 999px;
+  background: #f7f7f7;
+  color: #000;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  cursor: pointer;
+}
+
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: var(--footer-muted);
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--footer-border);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--footer-muted);
+  font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: var(--footer-text);
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.footer-bottom-links a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-input {
+    flex-direction: column;
+  }
+
+  .footer-input button {
+    width: 100%;
+  }
 }
