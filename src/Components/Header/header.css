@@ -5,17 +5,15 @@
     padding: 1rem;
     align-items: center;
     box-shadow: 0px 0.1px 10px rgb(225, 223, 223);
+    position: relative;
 }
 
 .navbar .nav-mid {
     display: flex;
-
-
 }
 
 .nav-mid ul {
     display: flex;
-
 }
 
 .nav-mid ul li {
@@ -24,8 +22,6 @@
     list-style: none;
     cursor: pointer;
     font-family: "Montserrat", sans-serif;
-
-
 }
 
 .nav-mid ul li a {
@@ -44,6 +40,163 @@
     gap: 10px;
 }
 
+.login-desktop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #e3e3e3;
+    margin-top: auto;
+}
+
+.login-item {
+    width: 100%;
+}
+
+.user-name {
+    display: block;
+    padding: 0.75rem 1rem;
+    background: #f5f5f5;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #111;
+}
+
+.cart-link-mobile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #111;
+    transition: background 0.2s ease;
+}
+
+.cart-link-mobile:hover {
+    background: #f5f5f5;
+}
+
+.cart-link-mobile img {
+    height: 20px;
+    width: 20px;
+}
+
 li img {
     height: 25px;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+    min-width: 30px !important;
+}
+
+.hamburger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #111;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-line.active:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-line.active:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-line.active:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Responsive styles for tablet and below (max-width: 800px) */
+@media (max-width: 800px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-mid {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        overflow-y: auto;
+    }
+
+    .nav-mid ul {
+        flex: 0 0 auto;
+    }
+
+    .nav-mid.menu-open {
+        right: 0;
+    }
+
+    .nav-mid ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-mid ul li {
+        margin: 0;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #e3e3e3;
+        width: 100%;
+    }
+
+    .nav-mid ul li a {
+        display: block;
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .login-desktop {
+        display: none;
+    }
+
+    .login-mobile {
+        display: flex;
+    }
+}
+
+/* Overlay when menu is open */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: block;
 }

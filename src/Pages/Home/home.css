@@ -42,6 +42,7 @@
   height: 100%;
   width: 100%;
   padding: 2rem;
+  border-radius: 15px;
 }
 
 .hero-eyebrow {
@@ -222,7 +223,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 250px;
 }
 
 .t-product-image img {
@@ -287,11 +288,91 @@
   transform: translateY(10px);
   transition: 0.25s ease;
   pointer-events: none;
+  height: fit-content !important;
 }
 
 .active-pop {
   opacity: 1;
   transform: translateY(0);
+}
+
+.page-banner {
+  max-width: 1100px;
+  margin: 5rem auto 0;
+  background: linear-gradient(135deg, #0f0f0f, #2a2a2a);
+  border-radius: 32px;
+  padding: 4rem 3rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.4);
+}
+
+.page-banner-content {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.banner-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.page-banner h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 0;
+  font-weight: 700;
+}
+
+.banner-copy {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.banner-primary-btn,
+.banner-secondary-btn {
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+}
+
+.banner-primary-btn {
+  background: #fff;
+  color: #111;
+}
+
+.banner-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.banner-secondary-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.banner-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 640px) {
@@ -306,4 +387,30 @@
   .hero-card {
     grid-template-columns: 1fr;
   }
+
+  .page-banner {
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+  }
+
+  .banner-actions {
+    flex-direction: column;
+  }
+
+  .banner-primary-btn,
+  .banner-secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .section-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+    background: rgb(202, 197, 197);
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
 }

@@ -358,11 +358,14 @@
 
 @media (max-width: 768px) {
   .product-card {
-    padding: 2rem;
+    padding: 1rem;
   }
 
   .action-row {
     flex-direction: column;
+  }
+  .product-page{
+    padding: 4rem 1rem;
   }
 
   .primary-btn,
@@ -370,5 +373,11 @@
   .ghost-btn {
     width: 100%;
     text-align: center;
+  }
+  .price-row{
+    align-items: center;
+  }
+  .price-badge{
+    font-size: 0.5rem;
   }
 }

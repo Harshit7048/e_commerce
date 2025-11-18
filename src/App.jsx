@@ -12,6 +12,7 @@ import Login from './Pages/Login/Login.jsx'
 import ShopCategory from "./Pages/ShopCategory.jsx"
 import banner_mens from "./Components/Assets/banner_mens.png"
 import banner_women from './Components/Assets/banner_women.png'
+import Contact from "./Pages/Contact.jsx"
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/womens" element={<ShopCategory category="women" banner={banner_women} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact/>} />
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
 

@@ -100,7 +100,7 @@ export default function ShopCategory(props) {
                                     showAnimation()
                                 }}
                                     className="prod-btn"
-                                >Add to bag</button>
+                                >Add to Cart</button>
                                 <Link to={`/product/${ele.id}`} className="view-product-btn">View details</Link>
                             </div>
                         </div>
@@ -110,6 +110,18 @@ export default function ShopCategory(props) {
                     </div> : "")
                 }
             </div>
+
+            <section className="page-banner">
+                <div className="page-banner-content">
+                    <p className="banner-eyebrow">Explore more</p>
+                    <h2>Discover our full collection</h2>
+                    <p className="banner-copy">Browse our complete range of premium essentials, curated for quality and style.</p>
+                    <div className="banner-actions">
+                        <Link to="/" className="banner-primary-btn">Back to home</Link>
+                        <Link to="/contact" className="banner-secondary-btn">Contact us</Link>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

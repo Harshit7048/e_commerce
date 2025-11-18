@@ -99,6 +99,18 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <section className="page-banner">
+        <div className="page-banner-content">
+          <p className="banner-eyebrow">Stay connected</p>
+          <h2>Join our community</h2>
+          <p className="banner-copy">Get early access to new arrivals, exclusive offers, and style inspiration delivered to your inbox.</p>
+          <div className="banner-actions">
+            <Link to="/womens" className="banner-primary-btn">Shop now</Link>
+            <Link to="/contact" className="banner-secondary-btn">Get in touch</Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
