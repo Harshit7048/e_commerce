@@ -1,5 +1,7 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
+import { HashRouter as Router } from "react-router-dom";
+import ScrollToTop from "../scrolltotop.jsx";
 
 import Home from "./Pages/Home/Home.jsx"
 import Header from "./Components/Header/Header.jsx"
@@ -13,10 +15,12 @@ import ShopCategory from "./Pages/ShopCategory.jsx"
 import banner_mens from "./Components/Assets/banner_mens.png"
 import banner_women from './Components/Assets/banner_women.png'
 import Contact from "./Pages/Contact.jsx"
+import Privacy from "./Pages/Privacy.jsx";
 
 function App() {
   return (
     <UserContextProvider>
+      <ScrollToTop />
       <Header />
 
       <Routes>
@@ -26,6 +30,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="/product/:productId" element={<Product />} />
       </Routes>
 

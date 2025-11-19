@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import { NavLink } from "react-router-dom";
 
 const linkGroups = [
   {
@@ -17,9 +18,9 @@ const linkGroups = [
 ];
 
 const contactDetails = [
-  "+1 (213) 555-0192",
-  "hi@shoppers.studio",
-  "New York · Los Angeles",
+  "+91 XXXXXXXXXXX",
+  "shoppers@studio",
+
 ];
 
 export default function Footer() {
@@ -33,40 +34,48 @@ export default function Footer() {
             effortlessly from desk to dinner.
           </p>
           <div className="footer-social">
-            <a aria-label="Instagram" href="#">
-              <i className="fa-brands fa-instagram" />
+            <a aria-label="Instagram" href="https://www.linkedin.com/in/harshit-bh7048/" target="_blank">
+              <i className="fa-brands fa-linkedin" />
             </a>
-            <a aria-label="Facebook" href="#">
-              <i className="fa-brands fa-facebook-f" />
+            <a aria-label="Facebook" href="https://github.com/Harshit7048">
+              <i className="fa-brands fa-github" />
             </a>
-            <a aria-label="YouTube" href="#">
+            <a aria-label="YouTube" href="https://www.youtube.com/@hbfitflex">
               <i className="fa-brands fa-youtube" />
             </a>
           </div>
         </div>
 
         <div className="footer-links">
-          {linkGroups.map((group) => (
-            <div key={group.title} className="footer-column">
-              <p className="footer-heading">{group.title}</p>
-              <ul>
-                {group.links.map((link) => (
-                  <li key={link}>{link}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <ul>
+            <p>Shop</p>
+            <li>
+              <NavLink to={"/"}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={"/mens"}>
+                Mens
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to={"/contact"}>
+                Contact
+              </NavLink>
+            </li>
+          </ul>
         </div>
 
         <div className="footer-newsletter">
           <p className="footer-heading">Stay in the know</p>
           <p className="footer-copy">
-            Weekly drop alerts, bespoke styling notes, and early access to capsule
+            Weekly drop alerts, and early access to capsule
             releases.
           </p>
           <div className="footer-input">
             <input type="email" placeholder="Email address" />
-             
+
           </div>
           <ul className="footer-contact">
             {contactDetails.map((detail) => (
@@ -77,11 +86,12 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Shoppers Studio. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Shoppers Studio. All rights reserved. | @Harshit Bhardwaj</p>
         <div className="footer-bottom-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Cookies</a>
+          <NavLink to={"/privacy"}>
+            Privacy Policy
+          </NavLink>
+
         </div>
       </div>
     </footer>

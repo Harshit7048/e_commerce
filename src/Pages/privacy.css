@@ -1,0 +1,50 @@
+.policy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    line-height: 1.7;
+    color: #333;
+    font-family: system-ui, sans-serif;
+}
+
+.policy-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.policy-updated {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.policy-section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.policy-subtitle {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.policy-text {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.policy-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+}
+
+.policy-list li {
+    margin-bottom: 6px;
+}

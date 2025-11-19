@@ -70,6 +70,12 @@
   flex-wrap: wrap;
 }
 
+.footer-links ul p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+
 .footer-column {
   min-width: 120px;
 }
