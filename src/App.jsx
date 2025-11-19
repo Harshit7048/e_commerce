@@ -1,10 +1,10 @@
 import React from "react"
 import { Route, Routes } from "react-router-dom"
 
-import Home from "./Pages/Home/Home"
-import Header from "./Components/Header/Header"
-import Footer from "./Components/Footer/Footer"
-import UserContextProvider from "./Components/Context/UserContextProvider"
+import Home from "./Pages/Home/Home.jsx"
+import Header from "./Components/Header/Header.jsx"
+import Footer from "./Components/Footer/Footer.jsx"
+import UserContextProvider from "./Components/Context/UserContextProvider.jsx"
 
 import Login from './Pages/Login/Login.jsx'
 import Cart from './Pages/Cart.jsx'
