@@ -1,32 +1,40 @@
-.login-form{
+.login-form {
     max-width: 1200px;
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
     margin: auto;
     margin-top: 30px;
     height: 70vh;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     width: 40%;
-    background-color: rgb(245, 239, 239);
+    background-color: rgb(255, 255, 255);
     padding: 20px;
     height: 100%;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px 1px 40px rgb(229, 220, 220);
+    border-radius: 15px;
 
 }
-.form input{
+
+.form input {
     height: 50px;
     width: 90%;
     border: 2px solid rgb(163, 157, 157);
     margin-top: 20px;
     padding: 10px;
     outline: none;
-    
+
 }
-.handle-login{
+
+.handle-login {
     height: 45px;
     background-color: rgb(31, 23, 38);
     margin-top: 30px;
@@ -35,11 +43,23 @@
     border-radius: 0px;
     cursor: pointer;
 }
-.form-side{
-    width: 60%;
+
+.form-side {
+    width: 50%;
     height: 100%;
-    background-color: black;
-    background-image: url('https://browntape.com/wp-content/uploads/2016/09/Man-and-woman-shopping-Shutterstock-984x500-1.jpg');
+    /* background-color: black; */
+    /* background-image: url('https://browntape.com/wp-content/uploads/2016/09/Man-and-woman-shopping-Shutterstock-984x500-1.jpg'); */
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.form-side h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 1px 5px rgb(184, 179, 179);
+
 }

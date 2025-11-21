@@ -16,6 +16,9 @@ import banner_mens from "./Components/Assets/banner_mens.png"
 import banner_women from './Components/Assets/banner_women.png'
 import Contact from "./Pages/Contact.jsx"
 import Privacy from "./Pages/Privacy.jsx";
+import AdminPanel from "../Admin/AdminPanel/AdminPanel.jsx";
+import Orders from "../Admin/Orders/Orders.jsx";
+import Overview from "../Admin/Overview/Overview.jsx";
 
 function App() {
   return (
@@ -31,6 +34,10 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/admin" element={<AdminPanel />} >
+          <Route path="/admin/orders" element={<Orders />} />
+          <Route path="/admin/overview" element={<Overview />} />
+        </Route>
         <Route path="/product/:productId" element={<Product />} />
       </Routes>
 
