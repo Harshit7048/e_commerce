@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import { useContext } from "react";
 import CartContext from "../Components/Context/CartContext";
 import "./cart.css";
+import { NavLink } from "react-router-dom";
 
 const currencyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
@@ -106,7 +107,11 @@ export default function Cart() {
               <span>{total === 0 ? "$0.00" : `$${finalCost}`}</span>
             </p>
 
-            <button className="check-out-btn">Proceed to payment</button>
+            <button className="check-out-btn">
+              <NavLink to={'/checkout'}>
+                Proceed to payment
+              </NavLink>
+            </button>
 
             <div className="summary-perks">
               <p>✔ Secure payments with SSL encryption</p>
